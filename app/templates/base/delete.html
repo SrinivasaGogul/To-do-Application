@@ -1,0 +1,15 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<body>
+    <div class="header-bar">
+        <a href="{% url 'detail' %}">&#8592; Back</a>
+    </div>
+    <div class="card-body">
+        <h1>Are you sure of deleting {{task}}..! </h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input class="button" type="submit" value="Delete">
+        </form> <br>
+    </div>
+</body>
+{% endblock content %}
